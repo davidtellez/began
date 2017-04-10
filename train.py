@@ -65,7 +65,9 @@ class Trainer():
 
             # Update params
             k_t = k_t_1
-            learning_rate *= 0.9999
+
+            if iteration_i % 2000 == 0:
+                learning_rate *= 0.5
 
 
 def plot_grid(batch, output_path):
